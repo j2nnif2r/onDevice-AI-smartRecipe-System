@@ -202,5 +202,3 @@ A simple dish using the detected ingredients as the main ingredients.
 - Ollama와 Gemma3가 설치되어 있어야 레시피 추천 기능이 동작합니다.
 - 모델 파일 용량이 큰 경우 GitHub 업로드 시 Git LFS 사용을 권장합니다.
 - 현재 결과는 터미널에 출력됩니다.
-
-—
