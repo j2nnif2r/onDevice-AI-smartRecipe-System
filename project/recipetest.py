@@ -78,18 +78,42 @@ while cap.isOpened():
 Detected ingredients:
 {detected_count}
 
-Suggest one simple dish using these detected ingredients as the main ingredients.
-Seasonings, sauces, oil, and spices can be used freely, even if not detected.
-Do not add extra main ingredients.
+Suggest one simple dish using these detected ingredients as the ONLY possible main ingredients.
 
-Estimate the calories for one serving.
+CRITICAL RULES (MUST FOLLOW):
+- Main ingredients MUST contain ONLY items from Detected ingredients.
+- DO NOT add ANY extra items to Main ingredients under any circumstance.
+- Main ingredients must be a STRICT subset of detected ingredients.
+- If an ingredient is not in detected ingredients, it cannot appear in Main ingredients.
+
+You may use additional supporting ingredients (such as onion, garlic, egg, cheese, butter, vegetables, or noodles) ONLY if they are essential for the dish.
+
+IMPORTANT RULES:
+- Salt, pepper, oil, soy sauce, sugar, spices, herbs MUST NOT be listed as "Additional ingredients".
+- These MUST be included ONLY under "Seasonings/Sauce".
+- Do NOT treat seasonings or cooking oils as ingredients.
+- Do not duplicate items across sections.
+
+Provide:
+- A concise dish name
+- Main ingredients (ONLY from detected ingredients, no exceptions)
+- Additional supporting ingredients (real food ingredients only)
+- Seasonings/Sauce (must include salt, pepper, oils, sauces, spices if used)
+- Estimated calories for one serving
+- A short step-by-step recipe with 3-5 numbered steps
+
 Answer in English and keep it concise.
 
 Format:
 Dish:
 Main ingredients:
+Additional ingredients:
 Seasonings/Sauce:
 Estimated calories:
+Recipe:
+1.
+2.
+3.
 Comment:
 """
 
